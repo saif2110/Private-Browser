@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IAPViewController" customModule="SplitBrowser" customModuleProvider="target">
+            <connections>
+                <outlet property="continueButton" destination="tzQ-RB-Aez" id="eKp-Iv-73a"/>
+                <outlet property="skipButton" destination="288-rm-tmv" id="amb-MI-MvN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weekTitle" destination="CxS-F4-Tuq" id="X10-UG-B2e"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzQ-RB-Aez">
+                    <rect key="frame" x="16" y="736" width="361" height="55"/>
+                    <color key="backgroundColor" name="MainColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="wK6-ho-3op"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Continue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="27.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="continueButton:" destination="-1" eventType="touchUpInside" id="7YT-9Z-con"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="288-rm-tmv">
+                    <rect key="frame" x="16" y="69" width="18" height="22"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="skip:" destination="-1" eventType="touchUpInside" id="Ly1-ve-8za"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxS-F4-Tuq">
+                    <rect key="frame" x="16" y="463.33333333333331" width="361" height="71.666666666666686"/>
+                    <string key="text">Unlock a premium experience with our exclusive lifetime offer! Upgrade now to enjoy unlimited features and bid farewell to annoying ads forever, all for a single, unbeatable one-time fee of </string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PRO" translatesAutoresizingMaskIntoConstraints="NO" id="pvZ-PX-Rah">
+                    <rect key="frame" x="30" y="101" width="333" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="UbR-Ar-wTh"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifetime Upgrade to Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlW-qy-hx0">
+                    <rect key="frame" x="20" y="411" width="353" height="32.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                    <color key="textColor" name="MainColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tq-xR-M0V">
+                    <rect key="frame" x="173" y="801" width="47" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Restore"/>
+                    <connections>
+                        <action selector="restore:" destination="-1" eventType="touchUpInside" id="MvJ-FA-EzO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHc-fa-21D">
+                    <rect key="frame" x="276" y="802" width="97" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Terms &amp; Condition"/>
+                    <connections>
+                        <action selector="toc:" destination="-1" eventType="touchUpInside" id="cob-zR-SaZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw3-vj-N3g">
+                    <rect key="frame" x="20" y="802" width="73" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Privacy Policy"/>
+                    <connections>
+                        <action selector="privacy:" destination="-1" eventType="touchUpInside" id="0Dz-ky-tpB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Nw3-vj-N3g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2HU-lv-Jka"/>
+                <constraint firstItem="pvZ-PX-Rah" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="2pp-BJ-dJv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CxS-F4-Tuq" secondAttribute="trailing" constant="16" id="8Ds-UZ-sO9"/>
+                <constraint firstItem="NlW-qy-hx0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BZE-4s-hiF"/>
+                <constraint firstItem="tzQ-RB-Aez" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Bus-PT-ugz"/>
+                <constraint firstItem="zHc-fa-21D" firstAttribute="centerY" secondItem="3tq-xR-M0V" secondAttribute="centerY" id="DxC-78-Qr8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tzQ-RB-Aez" secondAttribute="trailing" constant="16" id="Ekr-Ai-5m1"/>
+                <constraint firstItem="Nw3-vj-N3g" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="10" id="Kap-EW-Kja"/>
+                <constraint firstItem="3tq-xR-M0V" firstAttribute="centerY" secondItem="Nw3-vj-N3g" secondAttribute="centerY" id="SRt-0p-Fzr"/>
+                <constraint firstItem="pvZ-PX-Rah" firstAttribute="top" secondItem="288-rm-tmv" secondAttribute="bottom" constant="10" id="WbO-RI-jZA"/>
+                <constraint firstItem="CxS-F4-Tuq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="XZV-xr-S0S"/>
+                <constraint firstItem="288-rm-tmv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Xsz-NV-Rfx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pvZ-PX-Rah" secondAttribute="trailing" constant="30" id="aQZ-OA-bi6"/>
+                <constraint firstItem="CxS-F4-Tuq" firstAttribute="top" secondItem="NlW-qy-hx0" secondAttribute="bottom" constant="20" id="ayC-pY-GmB"/>
+                <constraint firstItem="NlW-qy-hx0" firstAttribute="top" secondItem="pvZ-PX-Rah" secondAttribute="bottom" constant="10" id="gh7-tZ-pEZ"/>
+                <constraint firstItem="3tq-xR-M0V" firstAttribute="top" secondItem="tzQ-RB-Aez" secondAttribute="bottom" constant="10" id="mER-6b-cTh"/>
+                <constraint firstItem="3tq-xR-M0V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="o5L-Xj-X9s"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NlW-qy-hx0" secondAttribute="trailing" constant="20" id="oOG-D2-pM5"/>
+                <constraint firstItem="288-rm-tmv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="uA5-6E-nrU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zHc-fa-21D" secondAttribute="trailing" constant="20" id="x4n-gt-zD2"/>
+            </constraints>
+            <point key="canvasLocation" x="41.984732824427482" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="PRO" width="1024" height="1024"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="MainColor">
+            <color red="0.29499998688697815" green="0.5" blue="0.89999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
