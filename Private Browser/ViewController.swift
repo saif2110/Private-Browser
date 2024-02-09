@@ -76,6 +76,16 @@ class ViewController: UIViewController {
 
 extension ViewController: textfiledDelegate,WKNavigationDelegate {
    
+    func bookmarkUnlock() {
+        DispatchQueue.main.async {
+            let main = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = main.instantiateViewController(withIdentifier: "PinBookMarkVC") as! PinBookMarkVC
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        } 
+    }
+    
+   
     func returnPressed() {
         
     }

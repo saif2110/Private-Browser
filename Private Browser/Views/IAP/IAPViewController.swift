@@ -235,6 +235,7 @@ import UIKit
 //
 struct Manager {
     
+    private static let isPIN = "isPIN"
     private static let isProKey = "isPro"
     private static let isWelcomeDoneKey = "isWelcomeDone"
     private static let numberofTimesAppOpenKey = "numberofTimesAppOpen"
@@ -243,6 +244,15 @@ struct Manager {
     private static let historyArrayKey = "historyArray"
     
     
+    
+    static var PINis: String {
+        get {
+            return UserDefaults.standard.string(forKey: isPIN) ?? "NA"
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: isPIN)
+        }
+    }
     
     static var isPro: Bool {
         get {

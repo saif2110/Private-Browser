@@ -10,6 +10,7 @@ import WebKit
 
 protocol textfiledDelegate {
     func returnPressed()
+    func bookmarkUnlock()
 }
 
 class WebviewClass: UIView,UITextFieldDelegate {
@@ -181,6 +182,11 @@ class WebviewClass: UIView,UITextFieldDelegate {
             break
         }
         
+    }
+    
+    
+    @IBAction func bookmarkUnlock(_ sender: Any) {
+      delegate?.bookmarkUnlock()
     }
     
 }

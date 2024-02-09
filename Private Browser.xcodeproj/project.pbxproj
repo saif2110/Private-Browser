@@ -16,11 +16,13 @@
 		6A10D3F22B6F730600BBD0C8 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A10D3E92B6F730600BBD0C8 /* BookmarkCell.xib */; };
 		6A10D3F32B6F730600BBD0C8 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A10D3EB2B6F730600BBD0C8 /* IAPViewController.swift */; };
 		6A10D3F42B6F730600BBD0C8 /* IAPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A10D3EC2B6F730600BBD0C8 /* IAPViewController.xib */; };
+		6AA7D13B2B7541FE00416F8A /* KAPinField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7D13A2B7541FE00416F8A /* KAPinField.swift */; };
 		6AC737482B67E82F0089BBF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC737472B67E82F0089BBF3 /* AppDelegate.swift */; };
 		6AC7374C2B67E82F0089BBF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7374B2B67E82F0089BBF3 /* ViewController.swift */; };
 		6AC7374F2B67E82F0089BBF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7374D2B67E82F0089BBF3 /* Main.storyboard */; };
 		6AC737512B67E8310089BBF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC737502B67E8310089BBF3 /* Assets.xcassets */; };
 		6AC737542B67E8310089BBF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC737522B67E8310089BBF3 /* LaunchScreen.storyboard */; };
+		6AC9BD302B70CA4B00656355 /* PinBookMarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9BD2F2B70CA4B00656355 /* PinBookMarkVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,7 @@
 		6A10D3E92B6F730600BBD0C8 /* BookmarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
 		6A10D3EB2B6F730600BBD0C8 /* IAPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
 		6A10D3EC2B6F730600BBD0C8 /* IAPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IAPViewController.xib; sourceTree = "<group>"; };
+		6AA7D13A2B7541FE00416F8A /* KAPinField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPinField.swift; sourceTree = "<group>"; };
 		6AC737442B67E82F0089BBF3 /* Private Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Private Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC737472B67E82F0089BBF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AC7374B2B67E82F0089BBF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		6AC737502B67E8310089BBF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AC737532B67E8310089BBF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AC737552B67E8310089BBF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AC9BD2F2B70CA4B00656355 /* PinBookMarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinBookMarkVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				6A10D3E32B6F730600BBD0C8 /* Welcome */,
 				6A10D3E72B6F730600BBD0C8 /* Cell */,
 				6A10D3EA2B6F730600BBD0C8 /* IAP */,
+				6AC9BD2F2B70CA4B00656355 /* PinBookMarkVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +105,14 @@
 			path = IAP;
 			sourceTree = "<group>";
 		};
+		6AA7D1392B7541F100416F8A /* SDk */ = {
+			isa = PBXGroup;
+			children = (
+				6AA7D13A2B7541FE00416F8A /* KAPinField.swift */,
+			);
+			path = SDk;
+			sourceTree = "<group>";
+		};
 		6AC7373B2B67E82F0089BBF3 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +132,7 @@
 		6AC737462B67E82F0089BBF3 /* Private Browser */ = {
 			isa = PBXGroup;
 			children = (
+				6AA7D1392B7541F100416F8A /* SDk */,
 				6A10D3E12B6F730600BBD0C8 /* Views */,
 				6A10D3DE2B6F72E500BBD0C8 /* Globel */,
 				6AC737472B67E82F0089BBF3 /* AppDelegate.swift */,
@@ -147,6 +161,8 @@
 			dependencies = (
 			);
 			name = "Private Browser";
+			packageProductDependencies = (
+			);
 			productName = "Private Browser";
 			productReference = 6AC737442B67E82F0089BBF3 /* Private Browser.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +191,8 @@
 				Base,
 			);
 			mainGroup = 6AC7373B2B67E82F0089BBF3;
+			packageReferences = (
+			);
 			productRefGroup = 6AC737452B67E82F0089BBF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,6 +228,8 @@
 				6A10D3F12B6F730600BBD0C8 /* BookmarkCell.swift in Sources */,
 				6AC737482B67E82F0089BBF3 /* AppDelegate.swift in Sources */,
 				6A10D3F32B6F730600BBD0C8 /* IAPViewController.swift in Sources */,
+				6AA7D13B2B7541FE00416F8A /* KAPinField.swift in Sources */,
+				6AC9BD302B70CA4B00656355 /* PinBookMarkVC.swift in Sources */,
 				6A10D3F02B6F730600BBD0C8 /* WebviewClass.swift in Sources */,
 				6A10D3EE2B6F730600BBD0C8 /* WelcomeEnd.swift in Sources */,
 				6A10D3E02B6F72E600BBD0C8 /* GlobelModel.swift in Sources */,
