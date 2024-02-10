@@ -7,10 +7,9 @@
 
 
 import UIKit
-import KAPinField
 
 protocol PinBookMarkVCDelegates {
-    func pinenterdSuccess()5
+    func pinenterdSuccess()
 }
 
 class PinBookMarkVC: UIViewController, KAPinFieldDelegate, UITextFieldDelegate {
@@ -25,11 +24,21 @@ class PinBookMarkVC: UIViewController, KAPinFieldDelegate, UITextFieldDelegate {
         if Manager.PINis == "NA" {
             Manager.PINis = code
             self.dismiss(animated: true)
+            return
         }
         
         if Manager.PINis == code {
             delegate?.pinenterdSuccess()
             self.dismiss(animated: true)
+            return
+        }
+        
+        if Manager.PINis != code {
+            label.text = "Entered pin is wrong. Please try again."
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.dismiss(animated: true)
+            }
+            return
         }
         
     }
@@ -48,7 +57,9 @@ class PinBookMarkVC: UIViewController, KAPinFieldDelegate, UITextFieldDelegate {
             label.text = "Please enter your pin to unlock private bookmarks."
         }
         
+        pinField.keyboardType = .numberPad
         pinField.properties.delegate = self
+        pinField.becomeFirstResponder()
         
        
         

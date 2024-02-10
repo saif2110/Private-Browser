@@ -15,6 +15,8 @@ protocol textfiledDelegate {
 
 class WebviewClass: UIView,UITextFieldDelegate {
     
+    @IBOutlet weak var unlockedView: UIView!
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         delegate?.returnPressed()
         return true

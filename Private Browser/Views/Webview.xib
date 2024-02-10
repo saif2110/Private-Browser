@@ -17,6 +17,7 @@
                 <outlet property="menuSlack" destination="KcP-LH-Aus" id="JTy-7K-3jm"/>
                 <outlet property="noBookmarksYet" destination="UGF-ic-HKY" id="cf5-An-JZT"/>
                 <outlet property="textfiled" destination="V13-S5-udY" id="X1g-uz-wU9"/>
+                <outlet property="unlockedView" destination="ttX-bj-x5i" id="fvr-t3-S1u"/>
                 <outlet property="webbar" destination="nui-qA-bkK" id="ZVF-bV-acO"/>
                 <outlet property="webview" destination="toi-cx-FrO" id="XMX-8u-529"/>
             </connections>

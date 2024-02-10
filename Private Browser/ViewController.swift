@@ -74,12 +74,18 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController: textfiledDelegate,WKNavigationDelegate {
+extension ViewController: textfiledDelegate,WKNavigationDelegate,PinBookMarkVCDelegates {
+ 
+    func pinenterdSuccess() {
+        wkwebview.unlockedView.isHidden = true
+    }
+    
    
     func bookmarkUnlock() {
         DispatchQueue.main.async {
             let main = UIStoryboard(name: "Main", bundle: Bundle.main)
             let vc = main.instantiateViewController(withIdentifier: "PinBookMarkVC") as! PinBookMarkVC
+            vc.delegate = self
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         } 
