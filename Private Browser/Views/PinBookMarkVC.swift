@@ -43,10 +43,7 @@ class PinBookMarkVC: UIViewController, KAPinFieldDelegate, UITextFieldDelegate {
         
     }
     
-   
-  
     @IBOutlet var pinField: KAPinField!
-
     @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
@@ -60,10 +57,7 @@ class PinBookMarkVC: UIViewController, KAPinFieldDelegate, UITextFieldDelegate {
         pinField.keyboardType = .numberPad
         pinField.properties.delegate = self
         pinField.becomeFirstResponder()
-        
-       
-        
-       
+    
     }
     
 
