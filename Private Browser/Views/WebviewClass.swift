@@ -15,6 +15,8 @@ protocol textfiledDelegate {
 
 class WebviewClass: UIView,UITextFieldDelegate {
     
+    @IBOutlet weak var scriptSwitch: UISwitch!
+    @IBOutlet weak var adsBlockSwitch: UISwitch!
     @IBOutlet weak var unlockedView: UIView!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -64,6 +66,18 @@ class WebviewClass: UIView,UITextFieldDelegate {
         self.bookmarCollection.dataSource = self
         self.bookmarCollection.reloadData()
         
+        self.adsBlockSwitch.isOn = Manager.isBlockAd
+        self.scriptSwitch.isOn = Manager.isBlockScript
+        
+        if adsBlockSwitch.isOn {
+            blockAds()
+        }
+      
+        
+        
+        if scriptSwitch.isOn  {
+            webview.configuration.defaultWebpagePreferences.allowsContentJavaScript = false
+        }
     }
     
     @IBAction func openMenu(_ sender: Any) {
@@ -119,6 +133,69 @@ class WebviewClass: UIView,UITextFieldDelegate {
         }
         
     }
+    
+    let contentToBlock = """
+                    {
+                      "trigger": {
+                        "url-filter": "googleads.g.doubleclick.net*"
+                
+                      },
+                      "action": {
+                        "type": "block"
+                      }
+                    },
+                    {
+                      "trigger": {
+                        "url-filter": "pagead.googlesyndication.com*"
+                
+                      },
+                      "action": {
+                        "type": "block"
+                      }
+                    },
+                    {
+                      "trigger": {
+                        "url-filter": "pagead1.googlesyndication.com*"
+                
+                      },
+                      "action": {
+                        "type": "block"
+                      }
+                    },
+                    {
+                      "trigger": {
+                        "url-filter": "pagead2.googlesyndication.com*"
+                
+                      },
+                      "action": {
+                        "type": "block"
+                      }
+                    }
+                """
+    
+    private func blockAds(){
+        
+        WKContentRuleListStore.default().compileContentRuleList(forIdentifier: "ruleId1", encodedContentRuleList: contentToBlock) { [weak self] (contentRuleList: WKContentRuleList?, error: Error?) in
+            if let list = contentRuleList {
+                self?.webview.configuration.userContentController.add(list)
+            }
+        }
+    }
+   
+    
+    
+    @IBAction func blockAdsSwitch(_ sender: UISwitch) {
+        Manager.isBlockAd = sender.isOn
+        guard sender.isOn else { return}
+        blockAds()
+    }
+    
+    @IBAction func blockScriptSwitch(_ sender: UISwitch) {
+        Manager.isBlockScript = sender.isOn
+        guard sender.isOn else { return}
+        webview.configuration.defaultWebpagePreferences.allowsContentJavaScript = false
+    }
+    
     
     private func hitwebview(url:String){
         webbar.isHidden = true
@@ -188,7 +265,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
     
     
     @IBAction func bookmarkUnlock(_ sender: Any) {
-      delegate?.bookmarkUnlock()
+        delegate?.bookmarkUnlock()
     }
     
 }

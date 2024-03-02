@@ -234,7 +234,9 @@ import UIKit
 //
 //
 struct Manager {
-    
+   
+    private static let isBlockScriptKey = "isBlockScript"
+    private static let isBlockAdKey = "isBlockAd"
     private static let isPIN = "isPIN"
     private static let isProKey = "isPro"
     private static let isWelcomeDoneKey = "isWelcomeDone"
@@ -260,6 +262,24 @@ struct Manager {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: isProKey)
+        }
+    }
+    
+    static var isBlockAd: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: isBlockAdKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: isBlockAdKey)
+        }
+    }
+    
+    static var isBlockScript: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: isBlockScriptKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: isBlockScriptKey)
         }
     }
     

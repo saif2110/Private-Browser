@@ -12,10 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebviewClass" customModule="Private_Browser" customModuleProvider="target">
             <connections>
+                <outlet property="adsBlockSwitch" destination="xUE-2N-WGx" id="b2y-rb-gJW"/>
                 <outlet property="bookmarCollection" destination="mRU-ks-hEW" id="6J5-aA-FIj"/>
                 <outlet property="homepage" destination="NFB-Gd-7jZ" id="WMM-Ku-Vqz"/>
                 <outlet property="menuSlack" destination="KcP-LH-Aus" id="JTy-7K-3jm"/>
                 <outlet property="noBookmarksYet" destination="UGF-ic-HKY" id="cf5-An-JZT"/>
+                <outlet property="scriptSwitch" destination="FQL-cU-WXg" id="8ka-TL-pBF"/>
                 <outlet property="textfiled" destination="V13-S5-udY" id="X1g-uz-wU9"/>
                 <outlet property="unlockedView" destination="ttX-bj-x5i" id="fvr-t3-S1u"/>
                 <outlet property="webbar" destination="nui-qA-bkK" id="ZVF-bV-acO"/>
@@ -315,6 +317,9 @@
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xUE-2N-WGx">
                                     <rect key="frame" x="302" y="12" width="51" height="31"/>
                                     <color key="onTintColor" systemColor="systemGreenColor"/>
+                                    <connections>
+                                        <action selector="blockAdsSwitch:" destination="-1" eventType="valueChanged" id="KmV-ob-uxT"/>
+                                    </connections>
                                 </switch>
                             </subviews>
                             <color key="backgroundColor" name="AppTint"/>
@@ -338,10 +343,56 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICh-Qf-7LW">
+                            <rect key="frame" x="14" y="558.66666666666663" width="365" height="55"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block script trackers on websites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4G-wp-TeW">
+                                    <rect key="frame" x="56" y="19" width="234" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="java-script-logo" translatesAutoresizingMaskIntoConstraints="NO" id="fz1-Fe-gdF">
+                                    <rect key="frame" x="6" y="2" width="38" height="51"/>
+                                    <color key="tintColor" red="0.2274509804" green="0.1647058824" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="38" id="ods-BM-J0x"/>
+                                    </constraints>
+                                </imageView>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FQL-cU-WXg">
+                                    <rect key="frame" x="302" y="12" width="51" height="31"/>
+                                    <color key="onTintColor" systemColor="systemGreenColor"/>
+                                    <connections>
+                                        <action selector="blockScriptSwitch:" destination="-1" eventType="valueChanged" id="e3F-f8-gbU"/>
+                                    </connections>
+                                </switch>
+                            </subviews>
+                            <color key="backgroundColor" name="AppTint"/>
+                            <constraints>
+                                <constraint firstItem="fz1-Fe-gdF" firstAttribute="top" secondItem="ICh-Qf-7LW" secondAttribute="top" constant="2" id="55L-K4-gZL"/>
+                                <constraint firstAttribute="bottom" secondItem="fz1-Fe-gdF" secondAttribute="bottom" constant="2" id="7Yb-Za-4FQ"/>
+                                <constraint firstAttribute="trailing" secondItem="FQL-cU-WXg" secondAttribute="trailing" constant="14" id="GzS-Fi-zQT"/>
+                                <constraint firstItem="i4G-wp-TeW" firstAttribute="leading" secondItem="fz1-Fe-gdF" secondAttribute="trailing" constant="12" id="LTN-Qq-RIa"/>
+                                <constraint firstItem="i4G-wp-TeW" firstAttribute="centerY" secondItem="ICh-Qf-7LW" secondAttribute="centerY" id="Sw4-sL-1K2"/>
+                                <constraint firstItem="FQL-cU-WXg" firstAttribute="leading" secondItem="i4G-wp-TeW" secondAttribute="trailing" constant="12" id="ZpO-TR-GyH"/>
+                                <constraint firstItem="FQL-cU-WXg" firstAttribute="centerY" secondItem="i4G-wp-TeW" secondAttribute="centerY" id="a2s-og-jqo"/>
+                                <constraint firstItem="fz1-Fe-gdF" firstAttribute="leading" secondItem="ICh-Qf-7LW" secondAttribute="leading" constant="6" id="pnm-FZ-2Xf"/>
+                                <constraint firstAttribute="height" constant="55" id="w2C-Dr-K8E"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" name="Backgorund"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="vbK-bk-B8m" secondAttribute="trailing" constant="14" id="5PC-6Q-28o"/>
+                        <constraint firstAttribute="trailing" secondItem="ICh-Qf-7LW" secondAttribute="trailing" constant="14" id="8dz-73-TF0"/>
                         <constraint firstAttribute="trailing" secondItem="UGF-ic-HKY" secondAttribute="trailing" constant="14" id="8uW-yO-lRv"/>
                         <constraint firstItem="UGF-ic-HKY" firstAttribute="top" secondItem="vbK-bk-B8m" secondAttribute="bottom" constant="6" id="96T-Me-dBq"/>
                         <constraint firstItem="mRU-ks-hEW" firstAttribute="leading" secondItem="NFB-Gd-7jZ" secondAttribute="leading" constant="14" id="BwG-FK-PVe"/>
@@ -354,6 +405,8 @@
                         <constraint firstAttribute="trailing" secondItem="gOM-Sx-idM" secondAttribute="trailing" constant="14" id="O7g-hF-uhE"/>
                         <constraint firstItem="ptR-bT-gNr" firstAttribute="top" secondItem="9Uu-uV-4YE" secondAttribute="bottom" constant="30" id="Spc-XT-tvR"/>
                         <constraint firstItem="dXv-b3-YJq" firstAttribute="leading" secondItem="NFB-Gd-7jZ" secondAttribute="leading" constant="14" id="UHw-nV-wcq"/>
+                        <constraint firstItem="ICh-Qf-7LW" firstAttribute="leading" secondItem="NFB-Gd-7jZ" secondAttribute="leading" constant="14" id="Wgr-ci-h1o"/>
+                        <constraint firstItem="ICh-Qf-7LW" firstAttribute="top" secondItem="dXv-b3-YJq" secondAttribute="bottom" constant="18" id="XUF-NA-equ"/>
                         <constraint firstAttribute="trailing" secondItem="dXv-b3-YJq" secondAttribute="trailing" constant="14" id="Y6L-ao-5xU"/>
                         <constraint firstAttribute="trailing" secondItem="ptR-bT-gNr" secondAttribute="trailing" id="aHh-xp-59B"/>
                         <constraint firstItem="gOM-Sx-idM" firstAttribute="leading" secondItem="NFB-Gd-7jZ" secondAttribute="leading" constant="14" id="aTR-Q8-ZBm"/>
@@ -693,6 +746,7 @@
         <image name="flame.fill" catalog="system" width="106" height="128"/>
         <image name="google" width="682.66668701171875" height="682.66668701171875"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="java-script-logo" width="256" height="256"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <image name="lock.fill" catalog="system" width="125" height="128"/>
         <image name="mainBanner" width="438.66665649414062" height="90.666664123535156"/>

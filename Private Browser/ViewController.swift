@@ -35,9 +35,13 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    
     @objc func keyboardWillHide(notification: Notification) {
-//        self.mySplitView.assignRatios(newRatio: 0.5, for: 1)
-//        self.mySplitView.update()
+        //        self.mySplitView.assignRatios(newRatio: 0.5, for: 1)
+        //        self.mySplitView.update()
     }
     
     
@@ -55,7 +59,7 @@ class ViewController: UIViewController {
         checkIfInputIsFocused(in: wkwebview.webview) { [weak self] isFocused in
             if isFocused {
                 
-               // self?.activeWebView = "Upper"
+                // self?.activeWebView = "Upper"
                 self?.keyboardDetected()
                 return
             }
@@ -75,12 +79,12 @@ class ViewController: UIViewController {
 
 
 extension ViewController: textfiledDelegate,WKNavigationDelegate,PinBookMarkVCDelegates {
- 
+    
     func pinenterdSuccess() {
         wkwebview.unlockedView.isHidden = true
     }
     
-   
+    
     func bookmarkUnlock() {
         DispatchQueue.main.async {
             let main = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -88,10 +92,10 @@ extension ViewController: textfiledDelegate,WKNavigationDelegate,PinBookMarkVCDe
             vc.delegate = self
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
-        } 
+        }
     }
     
-   
+    
     func returnPressed() {
         
     }
