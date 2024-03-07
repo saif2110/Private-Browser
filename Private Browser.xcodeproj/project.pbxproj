@@ -23,6 +23,7 @@
 		6AC737512B67E8310089BBF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC737502B67E8310089BBF3 /* Assets.xcassets */; };
 		6AC737542B67E8310089BBF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC737522B67E8310089BBF3 /* LaunchScreen.storyboard */; };
 		6AC9BD302B70CA4B00656355 /* PinBookMarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC9BD2F2B70CA4B00656355 /* PinBookMarkVC.swift */; };
+		6AF7E8C52B98E4A5005116CC /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF7E8C42B98E4A5005116CC /* RevenueCat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF7E8C52B98E4A5005116CC /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +164,7 @@
 			);
 			name = "Private Browser";
 			packageProductDependencies = (
+				6AF7E8C42B98E4A5005116CC /* RevenueCat */,
 			);
 			productName = "Private Browser";
 			productReference = 6AC737442B67E82F0089BBF3 /* Private Browser.app */;
@@ -192,6 +195,7 @@
 			);
 			mainGroup = 6AC7373B2B67E82F0089BBF3;
 			packageReferences = (
+				6AF7E8C32B98E4A5005116CC /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 6AC737452B67E82F0089BBF3 /* Products */;
 			projectDirPath = "";
@@ -450,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6AF7E8C32B98E4A5005116CC /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6AF7E8C42B98E4A5005116CC /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AF7E8C32B98E4A5005116CC /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6AC7373C2B67E82F0089BBF3 /* Project object */;
 }

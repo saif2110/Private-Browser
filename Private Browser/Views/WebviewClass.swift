@@ -72,13 +72,16 @@ class WebviewClass: UIView,UITextFieldDelegate {
         if adsBlockSwitch.isOn {
             blockAds()
         }
-      
+        
         
         
         if scriptSwitch.isOn  {
             webview.configuration.defaultWebpagePreferences.allowsContentJavaScript = false
         }
+        
     }
+
+    
     
     @IBAction func openMenu(_ sender: Any) {
         self.menuSlack.isHidden.toggle()
@@ -181,7 +184,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
             }
         }
     }
-   
+    
     
     
     @IBAction func blockAdsSwitch(_ sender: UISwitch) {
@@ -300,4 +303,23 @@ extension WebviewClass:UICollectionViewDelegate,UICollectionViewDataSource {
         hitwebview(url: link)
     }
     
+}
+
+
+final class WebCacheCleaner {
+
+    class func clear() {
+        URLCache.shared.removeAllCachedResponses()
+
+        HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
+        print("[WebCacheCleaner] All cookies deleted")
+
+        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
+            records.forEach { record in
+                WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
+                print("[WebCacheCleaner] Record \(record) deleted")
+            }
+        }
+    }
+
 }

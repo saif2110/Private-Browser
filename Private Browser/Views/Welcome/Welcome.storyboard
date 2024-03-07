@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vql-hj-ebe">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -41,19 +40,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split-Multi Browser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWz-7M-OGQ">
                                 <rect key="frame" x="20" y="399" width="353" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <color key="textColor" name="MainColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do7-iO-wgX">
                                 <rect key="frame" x="16" y="452" width="361" height="107.66666666666663"/>
                                 <string key="text">Split-Multi Browser is a versatile and innovative web browsing app that revolutionizes your online experience. With its unique split-screen functionality, you can effortlessly multitask, surf multiple websites simultaneously, and boost your productivity like never before</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k2-wn-lZx">
                                 <rect key="frame" x="17" y="743" width="359" height="55"/>
-                                <color key="backgroundColor" name="MainColor"/>
+                                <color key="backgroundColor" name="AppTint"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="NKJ-gS-LL4"/>
                                 </constraints>
@@ -73,7 +72,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Backgorund"/>
                         <constraints>
                             <constraint firstItem="6k2-wn-lZx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="17" id="FRh-zw-Pxx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="do7-iO-wgX" secondAttribute="trailing" constant="16" id="QNB-BA-701"/>
@@ -114,23 +113,24 @@
                                 <string key="text">Duel Vertical Browser
 </string>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <color key="textColor" name="MainColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syt-2b-rr3">
                                 <rect key="frame" x="16" y="462.00000000000006" width="361" height="107.66666666666669"/>
                                 <string key="text">Duel Vertical Browser is a cutting-edge web navigation tool designed to enhance your online efficiency. With its dual vertical split-screen interface, you can effortlessly view and interact with two websites side by side, maximizing your multitasking capabilities. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Z-g5-IqX">
                                 <rect key="frame" x="17" y="743" width="359" height="55"/>
-                                <color key="backgroundColor" name="MainColor"/>
+                                <color key="backgroundColor" name="AppTint"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="mIX-fg-7bl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="tintColor" name="AppTint"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,7 +146,8 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7ge-aN-N1t"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Backgorund"/>
+                        <color key="tintColor" name="Backgorund"/>
                         <constraints>
                             <constraint firstItem="2x7-XJ-wmx" firstAttribute="leading" secondItem="7ge-aN-N1t" secondAttribute="leading" constant="30" id="3pH-o8-C7o"/>
                             <constraint firstItem="syt-2b-rr3" firstAttribute="top" secondItem="bQm-H7-ld2" secondAttribute="bottom" constant="20" id="800-SC-re8"/>
@@ -171,7 +172,7 @@
         <!--Welcome End-->
         <scene sceneID="Ycb-Xm-Dtp">
             <objects>
-                <viewController storyboardIdentifier="WelcomeEnd" id="GkY-pE-kRR" customClass="WelcomeEnd" customModule="SplitBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeEnd" id="GkY-pE-kRR" customClass="WelcomeEnd" customModule="Private_Browser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IOt-o6-nGG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,19 +188,19 @@
                                 <string key="text">Split Screen Browser
 </string>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <color key="textColor" name="MainColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-Af-Ast">
                                 <rect key="frame" x="16" y="462" width="361" height="89.666666666666629"/>
                                 <string key="text">Streamline your online activities and stay organized with Duel Vertical Browser, your go-to solution for efficient browsing. Say goodbye to constantly switching tabs and hello to seamless browsing efficiency with Split-Multi Browser.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea9-2T-YfZ">
                                 <rect key="frame" x="17" y="753" width="359" height="55"/>
-                                <color key="backgroundColor" name="MainColor"/>
+                                <color key="backgroundColor" name="AppTint"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="1y7-zK-lrx"/>
                                 </constraints>
@@ -219,7 +220,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="riu-8t-nFb"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Backgorund"/>
                         <constraints>
                             <constraint firstItem="ea9-2T-YfZ" firstAttribute="leading" secondItem="riu-8t-nFb" secondAttribute="leading" constant="17" id="4MA-cF-x1Q"/>
                             <constraint firstItem="6hw-Af-Ast" firstAttribute="leading" secondItem="riu-8t-nFb" secondAttribute="leading" constant="16" id="9Ik-iF-NPI"/>
@@ -246,8 +247,11 @@
         <image name="Onboarding 3" width="1024" height="1024"/>
         <image name="onboarding" width="2224" height="2001"/>
         <image name="onboarding 2" width="1970" height="1686"/>
-        <namedColor name="MainColor">
-            <color red="0.29499998688697815" green="0.5" blue="0.89999997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="AppTint">
+            <color red="0.10599999874830246" green="0.071000002324581146" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Backgorund">
+            <color red="0.14900000393390656" green="0.10199999809265137" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

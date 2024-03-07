@@ -19,9 +19,43 @@ class ViewController: UIViewController {
         wkwebview.webview.navigationDelegate = self
         self.primaryView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
+        
+        
+        if !Manager.isWelcomeDone {
+            DispatchQueue.main.async {
+                let main = UIStoryboard(name: "Welcome", bundle: Bundle.main)
+                let vc = main.instantiateViewController(identifier: "WelcomeVC")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false)
+            }
+        }
+        
+        
+        if !Manager.isPro {
+            DispatchQueue.main.async {
+                let vc = IAPViewController()
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false)
+            }
+        }
+        
+        
         // Register for keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        //NotificationCenter.default.addObserver(self, selector: #selector(callback), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(callback), name: UIApplication.willTerminateNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+    NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func callback() {
+        sleep(1)
+        WebCacheCleaner.clear()
     }
     
     func checkIfInputIsFocused(in webView: WKWebView, completion: @escaping (Bool) -> Void) {

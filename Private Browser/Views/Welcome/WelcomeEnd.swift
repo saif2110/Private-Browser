@@ -21,8 +21,8 @@ class WelcomeEnd: UIViewController {
         Manager.isWelcomeDone = true
         
         DispatchQueue.main.async {
-//            let vc = IAPViewController()
-//            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = IAPViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
