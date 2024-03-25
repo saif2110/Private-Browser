@@ -40,7 +40,7 @@ class IAPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        skipButton.isHidden = Manager.isnumberofTimesAppOpenKey > 3
+        //skipButton.isHidden = Manager.isnumberofTimesAppOpenKey > 8
         revenuCat()
         
         self.skipButton.alpha = 0.0

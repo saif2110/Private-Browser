@@ -51,20 +51,20 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxS-F4-Tuq">
-                    <rect key="frame" x="16" y="463.33333333333331" width="361" height="71.666666666666686"/>
+                    <rect key="frame" x="16" y="433.33333333333331" width="361" height="71.666666666666686"/>
                     <string key="text">Unlock a premium experience with our exclusive lifetime offer! Upgrade now to enjoy unlimited features and bid farewell to annoying ads forever, all for a single, unbeatable one-time fee of </string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PRO" translatesAutoresizingMaskIntoConstraints="NO" id="pvZ-PX-Rah">
-                    <rect key="frame" x="30" y="101" width="333" height="300"/>
+                    <rect key="frame" x="30" y="101" width="333" height="240"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="UbR-Ar-wTh"/>
+                        <constraint firstAttribute="height" constant="240" id="UbR-Ar-wTh"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifetime Upgrade to Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlW-qy-hx0">
-                    <rect key="frame" x="20" y="411" width="353" height="32.333333333333314"/>
+                    <rect key="frame" x="20" y="381" width="353" height="32.333333333333314"/>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -121,7 +121,7 @@
                 <constraint firstItem="288-rm-tmv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Xsz-NV-Rfx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pvZ-PX-Rah" secondAttribute="trailing" constant="30" id="aQZ-OA-bi6"/>
                 <constraint firstItem="CxS-F4-Tuq" firstAttribute="top" secondItem="NlW-qy-hx0" secondAttribute="bottom" constant="20" id="ayC-pY-GmB"/>
-                <constraint firstItem="NlW-qy-hx0" firstAttribute="top" secondItem="pvZ-PX-Rah" secondAttribute="bottom" constant="10" id="gh7-tZ-pEZ"/>
+                <constraint firstItem="NlW-qy-hx0" firstAttribute="top" secondItem="pvZ-PX-Rah" secondAttribute="bottom" constant="40" id="gh7-tZ-pEZ"/>
                 <constraint firstItem="3tq-xR-M0V" firstAttribute="top" secondItem="tzQ-RB-Aez" secondAttribute="bottom" constant="10" id="mER-6b-cTh"/>
                 <constraint firstItem="3tq-xR-M0V" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="o5L-Xj-X9s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NlW-qy-hx0" secondAttribute="trailing" constant="20" id="oOG-D2-pM5"/>
@@ -132,7 +132,7 @@
         </view>
     </objects>
     <resources>
-        <image name="PRO" width="1024" height="1024"/>
+        <image name="PRO" width="614" height="954"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AppTint">
             <color red="0.10599999874830246" green="0.071000002324581146" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

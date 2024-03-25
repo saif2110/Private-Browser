@@ -32,11 +32,7 @@ class ViewController: UIViewController {
         
         
         if !Manager.isPro {
-            DispatchQueue.main.async {
-                let vc = IAPViewController()
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: false)
-            }
+            showIAP()
         }
         
         
@@ -49,8 +45,17 @@ class ViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-      super.viewWillDisappear(animated)
-    NotificationCenter.default.removeObserver(self)
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    
+    private func showIAP(){
+        DispatchQueue.main.async {
+            let vc = IAPViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: false)
+        }
     }
     
     @objc func callback() {
@@ -113,6 +118,11 @@ class ViewController: UIViewController {
 
 
 extension ViewController: textfiledDelegate,WKNavigationDelegate,PinBookMarkVCDelegates {
+    
+    func openIAP() {
+        showIAP()
+    }
+    
     
     func pinenterdSuccess() {
         wkwebview.unlockedView.isHidden = true

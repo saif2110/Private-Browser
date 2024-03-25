@@ -11,6 +11,7 @@ import WebKit
 protocol textfiledDelegate {
     func returnPressed()
     func bookmarkUnlock()
+    func openIAP()
 }
 
 class WebviewClass: UIView,UITextFieldDelegate {
@@ -34,6 +35,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
     @IBOutlet weak var webview: WKWebView!
     var bookmark =  getBookmarks()
     var fevicon:UIImage?
+    var parentController:UIViewController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -186,14 +188,28 @@ class WebviewClass: UIView,UITextFieldDelegate {
     }
     
     
-    
+    //MARK: Switchers
     @IBAction func blockAdsSwitch(_ sender: UISwitch) {
+        guard Manager.isPro else {
+            adsBlockSwitch.isOn = false
+            Manager.isBlockAd = false
+            delegate?.openIAP()
+            return
+        }
         Manager.isBlockAd = sender.isOn
         guard sender.isOn else { return}
         blockAds()
     }
     
+   
     @IBAction func blockScriptSwitch(_ sender: UISwitch) {
+        guard Manager.isPro else {
+            scriptSwitch.isOn = false
+            Manager.isBlockScript = false
+            delegate?.openIAP()
+            return
+        }
+        
         Manager.isBlockScript = sender.isOn
         guard sender.isOn else { return}
         webview.configuration.defaultWebpagePreferences.allowsContentJavaScript = false
