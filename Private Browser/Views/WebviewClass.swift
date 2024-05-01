@@ -28,7 +28,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
     @IBOutlet weak var noBookmarksYet: UILabel!
     @IBOutlet weak var webbar: UIView!
     var delegate:textfiledDelegate?
-    @IBOutlet weak var homepage: UIView!
+    @IBOutlet weak var homepage: UIScrollView!
     @IBOutlet weak var bookmarCollection: UICollectionView!
     @IBOutlet weak var menuSlack: UIStackView!
     @IBOutlet weak var textfiled: UITextField!
@@ -127,7 +127,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
             appendBookmarks(newString: url)
             
         case 4:
-            
+
             homepage.isHidden = false
             self.bookmark = getBookmarks()
             self.bookmarCollection.reloadData()

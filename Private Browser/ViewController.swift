@@ -13,11 +13,14 @@ class ViewController: UIViewController {
     var wkwebview = WebviewClass()
     override func viewDidLoad() {
         super.viewDidLoad()
-        wkwebview.frame = primaryView.bounds
-        wkwebview.delegate = self
-        self.primaryView.addSubview(wkwebview)
-        wkwebview.webview.navigationDelegate = self
-        self.primaryView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        DispatchQueue.main.async {
+            self.wkwebview.frame = self.primaryView.bounds
+            self.primaryView.addSubview(self.wkwebview)
+            self.wkwebview.delegate = self
+            self.wkwebview.webview.navigationDelegate = self
+            self.primaryView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        }
         
         
         

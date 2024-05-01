@@ -107,12 +107,12 @@
 			path = IAP;
 			sourceTree = "<group>";
 		};
-		6AA7D1392B7541F100416F8A /* SDk */ = {
+		6AA7D1392B7541F100416F8A /* SDK */ = {
 			isa = PBXGroup;
 			children = (
 				6AA7D13A2B7541FE00416F8A /* KAPinField.swift */,
 			);
-			path = SDk;
+			path = SDK;
 			sourceTree = "<group>";
 		};
 		6AC7373B2B67E82F0089BBF3 = {
@@ -134,7 +134,7 @@
 		6AC737462B67E82F0089BBF3 /* Private Browser */ = {
 			isa = PBXGroup;
 			children = (
-				6AA7D1392B7541F100416F8A /* SDk */,
+				6AA7D1392B7541F100416F8A /* SDK */,
 				6A10D3E12B6F730600BBD0C8 /* Views */,
 				6A10D3DE2B6F72E500BBD0C8 /* Globel */,
 				6AC737472B67E82F0089BBF3 /* AppDelegate.swift */,
