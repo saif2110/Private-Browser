@@ -16,6 +16,11 @@
 		6A10D3F22B6F730600BBD0C8 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A10D3E92B6F730600BBD0C8 /* BookmarkCell.xib */; };
 		6A10D3F32B6F730600BBD0C8 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A10D3EB2B6F730600BBD0C8 /* IAPViewController.swift */; };
 		6A10D3F42B6F730600BBD0C8 /* IAPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A10D3EC2B6F730600BBD0C8 /* IAPViewController.xib */; };
+		6A96E0222BE78C8E00C18A0C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A96E0212BE78C8E00C18A0C /* GoogleService-Info.plist */; };
+		6A96E0252BE790B500C18A0C /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 6A96E0242BE790B500C18A0C /* FirebaseAnalyticsOnDeviceConversion */; };
+		6A96E0272BE790B500C18A0C /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A96E0262BE790B500C18A0C /* FirebaseAnalyticsSwift */; };
+		6A96E0292BE790B500C18A0C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 6A96E0282BE790B500C18A0C /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		6A96E02B2BE7921400C18A0C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6A96E02A2BE7921400C18A0C /* PrivacyInfo.xcprivacy */; };
 		6AA7D13B2B7541FE00416F8A /* KAPinField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA7D13A2B7541FE00416F8A /* KAPinField.swift */; };
 		6AC737482B67E82F0089BBF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC737472B67E82F0089BBF3 /* AppDelegate.swift */; };
 		6AC7374C2B67E82F0089BBF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7374B2B67E82F0089BBF3 /* ViewController.swift */; };
@@ -36,6 +41,8 @@
 		6A10D3E92B6F730600BBD0C8 /* BookmarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
 		6A10D3EB2B6F730600BBD0C8 /* IAPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
 		6A10D3EC2B6F730600BBD0C8 /* IAPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IAPViewController.xib; sourceTree = "<group>"; };
+		6A96E0212BE78C8E00C18A0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A96E02A2BE7921400C18A0C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6AA7D13A2B7541FE00416F8A /* KAPinField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPinField.swift; sourceTree = "<group>"; };
 		6AC737442B67E82F0089BBF3 /* Private Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Private Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC737472B67E82F0089BBF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A96E0272BE790B500C18A0C /* FirebaseAnalyticsSwift in Frameworks */,
 				6AF7E8C52B98E4A5005116CC /* RevenueCat in Frameworks */,
+				6A96E0252BE790B500C18A0C /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				6A96E0292BE790B500C18A0C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +128,7 @@
 		6AC7373B2B67E82F0089BBF3 = {
 			isa = PBXGroup;
 			children = (
+				6A96E02A2BE7921400C18A0C /* PrivacyInfo.xcprivacy */,
 				6AC737462B67E82F0089BBF3 /* Private Browser */,
 				6AC737452B67E82F0089BBF3 /* Products */,
 			);
@@ -134,6 +145,7 @@
 		6AC737462B67E82F0089BBF3 /* Private Browser */ = {
 			isa = PBXGroup;
 			children = (
+				6A96E0212BE78C8E00C18A0C /* GoogleService-Info.plist */,
 				6AA7D1392B7541F100416F8A /* SDK */,
 				6A10D3E12B6F730600BBD0C8 /* Views */,
 				6A10D3DE2B6F72E500BBD0C8 /* Globel */,
@@ -165,6 +177,9 @@
 			name = "Private Browser";
 			packageProductDependencies = (
 				6AF7E8C42B98E4A5005116CC /* RevenueCat */,
+				6A96E0242BE790B500C18A0C /* FirebaseAnalyticsOnDeviceConversion */,
+				6A96E0262BE790B500C18A0C /* FirebaseAnalyticsSwift */,
+				6A96E0282BE790B500C18A0C /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = "Private Browser";
 			productReference = 6AC737442B67E82F0089BBF3 /* Private Browser.app */;
@@ -196,6 +211,7 @@
 			mainGroup = 6AC7373B2B67E82F0089BBF3;
 			packageReferences = (
 				6AF7E8C32B98E4A5005116CC /* XCRemoteSwiftPackageReference "purchases-ios" */,
+				6A96E0232BE790B400C18A0C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6AC737452B67E82F0089BBF3 /* Products */;
 			projectDirPath = "";
@@ -212,7 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC737542B67E8310089BBF3 /* LaunchScreen.storyboard in Resources */,
+				6A96E0222BE78C8E00C18A0C /* GoogleService-Info.plist in Resources */,
 				6A10D3F22B6F730600BBD0C8 /* BookmarkCell.xib in Resources */,
+				6A96E02B2BE7921400C18A0C /* PrivacyInfo.xcprivacy in Resources */,
 				6A10D3ED2B6F730600BBD0C8 /* Webview.xib in Resources */,
 				6AC737512B67E8310089BBF3 /* Assets.xcassets in Resources */,
 				6AC7374F2B67E82F0089BBF3 /* Main.storyboard in Resources */,
@@ -456,6 +474,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6A96E0232BE790B400C18A0C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
 		6AF7E8C32B98E4A5005116CC /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
@@ -467,6 +493,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A96E0242BE790B500C18A0C /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A96E0232BE790B400C18A0C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		6A96E0262BE790B500C18A0C /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A96E0232BE790B400C18A0C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		6A96E0282BE790B500C18A0C /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A96E0232BE790B400C18A0C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
 		6AF7E8C42B98E4A5005116CC /* RevenueCat */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6AF7E8C32B98E4A5005116CC /* XCRemoteSwiftPackageReference "purchases-ios" */;

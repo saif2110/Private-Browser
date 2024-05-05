@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import RevenueCat
 
 
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Purchases.logLevel = .error
         Purchases.configure(withAPIKey: "appl_AkDFltEviXnLgkwrxYsSyozcfoU")
-        
+        FirebaseApp.configure()
         isPurchasesed()
         Manager.isnumberofTimesAppOpenKey = Manager.isnumberofTimesAppOpenKey + 1
         
