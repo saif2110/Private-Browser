@@ -81,8 +81,21 @@ class WebviewClass: UIView,UITextFieldDelegate {
             webview.configuration.defaultWebpagePreferences.allowsContentJavaScript = false
         }
         
+        updateSwipeGestureState()
+        
+        
     }
-
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // Re-evaluate the swipe gesture state after navigation completes
+        updateSwipeGestureState()
+    }
+    
+    func updateSwipeGestureState() {
+        // Enable or disable the swipe to go back gesture based on history
+        webview.allowsBackForwardNavigationGestures = webview.canGoBack
+    }
+    
     
     
     @IBAction func openMenu(_ sender: Any) {
@@ -127,7 +140,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
             appendBookmarks(newString: url)
             
         case 4:
-
+            
             homepage.isHidden = false
             self.bookmark = getBookmarks()
             self.bookmarCollection.reloadData()
@@ -201,7 +214,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
         blockAds()
     }
     
-   
+    
     @IBAction func blockScriptSwitch(_ sender: UISwitch) {
         guard Manager.isPro else {
             scriptSwitch.isOn = false
@@ -323,13 +336,13 @@ extension WebviewClass:UICollectionViewDelegate,UICollectionViewDataSource {
 
 
 final class WebCacheCleaner {
-
+    
     class func clear() {
         URLCache.shared.removeAllCachedResponses()
-
+        
         HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
         print("[WebCacheCleaner] All cookies deleted")
-
+        
         WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
             records.forEach { record in
                 WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
@@ -337,5 +350,5 @@ final class WebCacheCleaner {
             }
         }
     }
-
+    
 }
