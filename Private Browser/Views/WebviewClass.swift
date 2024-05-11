@@ -14,7 +14,7 @@ protocol textfiledDelegate {
     func openIAP()
 }
 
-class WebviewClass: UIView,UITextFieldDelegate {
+class WebviewClass: UIView,UITextFieldDelegate,WKNavigationDelegate {
     
     @IBOutlet weak var scriptSwitch: UISwitch!
     @IBOutlet weak var adsBlockSwitch: UISwitch!
@@ -59,6 +59,7 @@ class WebviewClass: UIView,UITextFieldDelegate {
         addSubview(view)
         
         let request = URLRequest(url: URL(string: "about:blank")!)
+        webview.addObserver(self, forKeyPath: "URL", options: .new, context: nil)
         webview.load(request)
         
         self.bookmarCollection.register(BookmarkCell.nib, forCellWithReuseIdentifier: BookmarkCell.name)
@@ -75,27 +76,24 @@ class WebviewClass: UIView,UITextFieldDelegate {
             blockAds()
         }
         
-        
-        
         if scriptSwitch.isOn  {
             webview.configuration.defaultWebpagePreferences.allowsContentJavaScript = false
         }
         
-        updateSwipeGestureState()
-        
-        
     }
     
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        // Re-evaluate the swipe gesture state after navigation completes
-        updateSwipeGestureState()
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let key = change?[NSKeyValueChangeKey.newKey] {
+            if String(describing:key) == "about:blank" {
+                UIView.animate(withDuration: 0.2) {
+                    self.webbar.isHidden = false
+                    self.homepage.isHidden = false
+                    self.bookmark = getBookmarks()
+                    self.bookmarCollection.reloadData()
+                }
+            }
+        }
     }
-    
-    func updateSwipeGestureState() {
-        // Enable or disable the swipe to go back gesture based on history
-        webview.allowsBackForwardNavigationGestures = webview.canGoBack
-    }
-    
     
     
     @IBAction func openMenu(_ sender: Any) {
